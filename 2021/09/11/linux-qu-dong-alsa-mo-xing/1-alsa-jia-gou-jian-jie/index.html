@@ -32,7 +32,7 @@
 <meta name="generator" content="Hexo 5.2.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
 <link rel="alternate" href="/atom.xml" title="萧十三的博客" type="application/atom+xml">
-</head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 
@@ -511,15 +511,15 @@
 <p><img src="/2021/09/11/linux-qu-dong-alsa-mo-xing/1-alsa-jia-gou-jian-jie/alsa.png"></p>
 <p><strong>ALSA设备文件结构</strong></p>
 <p>  我们从alsa在linux中的设备文件结构开始我们的alsa之旅. 看看我的电脑中的alsa驱动的设备文件结构:</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token builtin class-name">cd</span> /dev/snd
-$ <span class="token function">ls</span> -l
-crw-rw----+ <span class="token number">1</span> root audio <span class="token number">116</span>, <span class="token number">8</span> <span class="token number">2011</span>-02-23 <span class="token number">21</span>:38 controlC0
-crw-rw----+ <span class="token number">1</span> root audio <span class="token number">116</span>, <span class="token number">4</span> <span class="token number">2011</span>-02-23 <span class="token number">21</span>:38 midiC0D0
-crw-rw----+ <span class="token number">1</span> root audio <span class="token number">116</span>, <span class="token number">7</span> <span class="token number">2011</span>-02-23 <span class="token number">21</span>:39 pcmC0D0c
-crw-rw----+ <span class="token number">1</span> root audio <span class="token number">116</span>, <span class="token number">6</span> <span class="token number">2011</span>-02-23 <span class="token number">21</span>:56 pcmC0D0p
-crw-rw----+ <span class="token number">1</span> root audio <span class="token number">116</span>, <span class="token number">5</span> <span class="token number">2011</span>-02-23 <span class="token number">21</span>:38 pcmC0D1p
-crw-rw----+ <span class="token number">1</span> root audio <span class="token number">116</span>, <span class="token number">3</span> <span class="token number">2011</span>-02-23 <span class="token number">21</span>:38 <span class="token function">seq</span>
-crw-rw----+ <span class="token number">1</span> root audio <span class="token number">116</span>, <span class="token number">2</span> <span class="token number">2011</span>-02-23 <span class="token number">21</span>:38 timer
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ cd /dev/snd
+$ ls -l
+crw-rw----+ 1 root audio 116, 8 2011-02-23 21:38 controlC0
+crw-rw----+ 1 root audio 116, 4 2011-02-23 21:38 midiC0D0
+crw-rw----+ 1 root audio 116, 7 2011-02-23 21:39 pcmC0D0c
+crw-rw----+ 1 root audio 116, 6 2011-02-23 21:56 pcmC0D0p
+crw-rw----+ 1 root audio 116, 5 2011-02-23 21:38 pcmC0D1p
+crw-rw----+ 1 root audio 116, 3 2011-02-23 21:38 seq
+crw-rw----+ 1 root audio 116, 2 2011-02-23 21:38 timer
 $<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>  我们可以看到以下设备文件:</p>
@@ -533,20 +533,20 @@ $<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><s
 </ul>
 <p>其中，C0D0代表的是声卡0中的设备0，pcmC0D0c最后一个c代表capture，pcmC0D0p最后一个p代表playback，这些都是alsa-driver中的命名规则。</p>
 <p>在include/sound/core.h中，定义了以下设备类型：</p>
-<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span>	<span class="token macro-name">SNDRV_DEV_TOPLEVEL</span>	<span class="token expression"><span class="token punctuation">(</span><span class="token punctuation">(</span>__force <span class="token class-name">snd_device_type_t</span><span class="token punctuation">)</span> <span class="token number">0</span><span class="token punctuation">)</span></span></span>
-<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span>	<span class="token macro-name">SNDRV_DEV_CONTROL</span>	<span class="token expression"><span class="token punctuation">(</span><span class="token punctuation">(</span>__force <span class="token class-name">snd_device_type_t</span><span class="token punctuation">)</span> <span class="token number">1</span><span class="token punctuation">)</span></span></span>
-<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span>	<span class="token macro-name">SNDRV_DEV_LOWLEVEL_PRE</span>	<span class="token expression"><span class="token punctuation">(</span><span class="token punctuation">(</span>__force <span class="token class-name">snd_device_type_t</span><span class="token punctuation">)</span> <span class="token number">2</span><span class="token punctuation">)</span></span></span>
-<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span>	<span class="token macro-name">SNDRV_DEV_LOWLEVEL_NORMAL</span> <span class="token expression"><span class="token punctuation">(</span><span class="token punctuation">(</span>__force <span class="token class-name">snd_device_type_t</span><span class="token punctuation">)</span> <span class="token number">0x1000</span><span class="token punctuation">)</span></span></span>
-<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span>	<span class="token macro-name">SNDRV_DEV_PCM</span>		<span class="token expression"><span class="token punctuation">(</span><span class="token punctuation">(</span>__force <span class="token class-name">snd_device_type_t</span><span class="token punctuation">)</span> <span class="token number">0x1001</span><span class="token punctuation">)</span></span></span>
-<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span>	<span class="token macro-name">SNDRV_DEV_RAWMIDI</span>	<span class="token expression"><span class="token punctuation">(</span><span class="token punctuation">(</span>__force <span class="token class-name">snd_device_type_t</span><span class="token punctuation">)</span> <span class="token number">0x1002</span><span class="token punctuation">)</span></span></span>
-<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span>	<span class="token macro-name">SNDRV_DEV_TIMER</span>		<span class="token expression"><span class="token punctuation">(</span><span class="token punctuation">(</span>__force <span class="token class-name">snd_device_type_t</span><span class="token punctuation">)</span> <span class="token number">0x1003</span><span class="token punctuation">)</span></span></span>
-<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span>	<span class="token macro-name">SNDRV_DEV_SEQUENCER</span>	<span class="token expression"><span class="token punctuation">(</span><span class="token punctuation">(</span>__force <span class="token class-name">snd_device_type_t</span><span class="token punctuation">)</span> <span class="token number">0x1004</span><span class="token punctuation">)</span></span></span>
-<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span>	<span class="token macro-name">SNDRV_DEV_HWDEP</span>		<span class="token expression"><span class="token punctuation">(</span><span class="token punctuation">(</span>__force <span class="token class-name">snd_device_type_t</span><span class="token punctuation">)</span> <span class="token number">0x1005</span><span class="token punctuation">)</span></span></span>
-<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span>	<span class="token macro-name">SNDRV_DEV_INFO</span>		<span class="token expression"><span class="token punctuation">(</span><span class="token punctuation">(</span>__force <span class="token class-name">snd_device_type_t</span><span class="token punctuation">)</span> <span class="token number">0x1006</span><span class="token punctuation">)</span></span></span>
-<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span>	<span class="token macro-name">SNDRV_DEV_BUS</span>		<span class="token expression"><span class="token punctuation">(</span><span class="token punctuation">(</span>__force <span class="token class-name">snd_device_type_t</span><span class="token punctuation">)</span> <span class="token number">0x1007</span><span class="token punctuation">)</span></span></span>
-<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span>	<span class="token macro-name">SNDRV_DEV_CODEC</span>		<span class="token expression"><span class="token punctuation">(</span><span class="token punctuation">(</span>__force <span class="token class-name">snd_device_type_t</span><span class="token punctuation">)</span> <span class="token number">0x1008</span><span class="token punctuation">)</span></span></span>
-<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span>	<span class="token macro-name">SNDRV_DEV_JACK</span>          <span class="token expression"><span class="token punctuation">(</span><span class="token punctuation">(</span>__force <span class="token class-name">snd_device_type_t</span><span class="token punctuation">)</span> <span class="token number">0x1009</span><span class="token punctuation">)</span></span></span>
-<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span>	<span class="token macro-name">SNDRV_DEV_LOWLEVEL</span>	<span class="token expression"><span class="token punctuation">(</span><span class="token punctuation">(</span>__force <span class="token class-name">snd_device_type_t</span><span class="token punctuation">)</span> <span class="token number">0x2000</span><span class="token punctuation">)</span></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c">#define	SNDRV_DEV_TOPLEVEL	((__force snd_device_type_t) 0)
+#define	SNDRV_DEV_CONTROL	((__force snd_device_type_t) 1)
+#define	SNDRV_DEV_LOWLEVEL_PRE	((__force snd_device_type_t) 2)
+#define	SNDRV_DEV_LOWLEVEL_NORMAL ((__force snd_device_type_t) 0x1000)
+#define	SNDRV_DEV_PCM		((__force snd_device_type_t) 0x1001)
+#define	SNDRV_DEV_RAWMIDI	((__force snd_device_type_t) 0x1002)
+#define	SNDRV_DEV_TIMER		((__force snd_device_type_t) 0x1003)
+#define	SNDRV_DEV_SEQUENCER	((__force snd_device_type_t) 0x1004)
+#define	SNDRV_DEV_HWDEP		((__force snd_device_type_t) 0x1005)
+#define	SNDRV_DEV_INFO		((__force snd_device_type_t) 0x1006)
+#define	SNDRV_DEV_BUS		((__force snd_device_type_t) 0x1007)
+#define	SNDRV_DEV_CODEC		((__force snd_device_type_t) 0x1008)
+#define	SNDRV_DEV_JACK          ((__force snd_device_type_t) 0x1009)
+#define	SNDRV_DEV_LOWLEVEL	((__force snd_device_type_t) 0x2000)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>通常，我们更关心的是pcm和control这两种设备。</p>
 <p><strong>驱动的代码文件结构</strong></p>
@@ -562,14 +562,14 @@ $<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><s
       /synth
           /emux
       /pci
-          /<span class="token punctuation">(</span>cards<span class="token punctuation">)</span>
+          /(cards)
       /isa
-          /<span class="token punctuation">(</span>cards<span class="token punctuation">)</span>
+          /(cards)
       /arm
       /ppc
       /sparc
       /usb
-      /pcmcia /<span class="token punctuation">(</span>cards<span class="token punctuation">)</span>
+      /pcmcia /(cards)
       /oss
       /soc
           /codecs<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
