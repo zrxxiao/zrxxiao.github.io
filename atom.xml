@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>萧十三的博客</title>
+  
+  <subtitle>萧十三</subtitle>
+  <link href="https://zrxxiao.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://zrxxiao.github.io/"/>
+  <updated>2021-09-11T14:40:45.677Z</updated>
+  <id>https://zrxxiao.github.io/</id>
+  
+  <author>
+    <name>zrxxiao</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>1_ALSA架构简介</title>
+    <link href="https://zrxxiao.github.io/2021/09/11/linux-qu-dong-alsa-mo-xing/1-alsa-jia-gou-jian-jie/"/>
+    <id>https://zrxxiao.github.io/2021/09/11/linux-qu-dong-alsa-mo-xing/1-alsa-jia-gou-jian-jie/</id>
+    <published>2021-09-11T13:22:59.302Z</published>
+    <updated>2021-09-11T14:40:45.677Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;ALSA架构简介&lt;/p&gt;
+&lt;p&gt;![](E:\myblog\source_posts\linux驱动 alsa模型\alsa.png)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;ALSA设备文件结构&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt; </summary>
+        
+      
+    
+    
+    
+    <category term="linux驱动 alsa模型" scheme="https://zrxxiao.github.io/categories/linux%E9%A9%B1%E5%8A%A8-alsa%E6%A8%A1%E5%9E%8B/"/>
+    
+    
+    <category term="c" scheme="https://zrxxiao.github.io/tags/c/"/>
+    
+    <category term="alsa" scheme="https://zrxxiao.github.io/tags/alsa/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>1012 数字分类</title>
+    <link href="https://zrxxiao.github.io/2021/09/11/pat-basic-level/1012-shu-zi-fen-lei/"/>
+    <id>https://zrxxiao.github.io/2021/09/11/pat-basic-level/1012-shu-zi-fen-lei/</id>
+    <published>2021-09-11T12:40:25.228Z</published>
+    <updated>2021-09-11T13:11:40.949Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;strong&gt;1012 数字分类 (20 分)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;给定一系列正整数，请按要求对数字进行分类，并输出以下 5 个数字：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;A&lt;/em&gt;1 = 能被 5</summary>
+        
+      
+    
+    
+    
+    <category term="PAT(Basic Level)" scheme="https://zrxxiao.github.io/categories/PAT-Basic-Level/"/>
+    
+    
+    <category term="c++" scheme="https://zrxxiao.github.io/tags/c/"/>
+    
+    <category term="PAT" scheme="https://zrxxiao.github.io/tags/PAT/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>1011 A+B 和 C</title>
+    <link href="https://zrxxiao.github.io/2021/09/11/pat-basic-level/1011-a-b-he-c/"/>
+    <id>https://zrxxiao.github.io/2021/09/11/pat-basic-level/1011-a-b-he-c/</id>
+    <published>2021-09-11T12:40:17.155Z</published>
+    <updated>2021-09-11T13:09:48.626Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;strong&gt;1011 A+B 和 C (15 分)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;给定区间 [−231,231] 内的 3 个整数 &lt;em&gt;A&lt;/em&gt;、&lt;em&gt;B&lt;/em&gt; 和 &lt;em&gt;C&lt;/em&gt;，请判断 &lt;em&gt;A&lt;/em&gt;+&lt;em&gt;B&lt;/em&gt; 是否大于</summary>
+        
+      
+    
+    
+    
+    <category term="PAT(Basic Level)" scheme="https://zrxxiao.github.io/categories/PAT-Basic-Level/"/>
+    
+    
+    <category term="c++" scheme="https://zrxxiao.github.io/tags/c/"/>
+    
+    <category term="PAT" scheme="https://zrxxiao.github.io/tags/PAT/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>1010 一元多项式求导</title>
+    <link href="https://zrxxiao.github.io/2021/09/11/pat-basic-level/1010-yi-yuan-duo-xiang-shi-qiu-dao/"/>
+    <id>https://zrxxiao.github.io/2021/09/11/pat-basic-level/1010-yi-yuan-duo-xiang-shi-qiu-dao/</id>
+    <published>2021-09-11T12:40:07.807Z</published>
+    <updated>2021-09-11T13:08:03.327Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;strong&gt;1010 一元多项式求导 (25</summary>
+        
+      
+    
+    
+    
+    <category term="PAT(Basic Level)" scheme="https://zrxxiao.github.io/categories/PAT-Basic-Level/"/>
+    
+    
+    <category term="c++" scheme="https://zrxxiao.github.io/tags/c/"/>
+    
+    <category term="PAT" scheme="https://zrxxiao.github.io/tags/PAT/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>1009 说反话</title>
+    <link href="https://zrxxiao.github.io/2021/09/11/pat-basic-level/1009-shuo-fan-hua/"/>
+    <id>https://zrxxiao.github.io/2021/09/11/pat-basic-level/1009-shuo-fan-hua/</id>
+    <published>2021-09-11T12:40:00.546Z</published>
+    <updated>2021-09-11T13:06:13.623Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;strong&gt;1009 说反话 (20 分)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;给定一句英语，要求你编写程序，将句中所有单词的顺序颠倒输出。&lt;/p&gt;
+&lt;p&gt;输入格式：&lt;/p&gt;
+&lt;p&gt;测试输入包含一个测试用例，在一行内给出总长度不超过 80</summary>
+        
+      
+    
+    
+    
+    <category term="PAT(Basic Level)" scheme="https://zrxxiao.github.io/categories/PAT-Basic-Level/"/>
+    
+    
+    <category term="c++" scheme="https://zrxxiao.github.io/tags/c/"/>
+    
+    <category term="PAT" scheme="https://zrxxiao.github.io/tags/PAT/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>1008 数组元素循环右移问题</title>
+    <link href="https://zrxxiao.github.io/2021/09/11/pat-basic-level/1008-shu-zu-yuan-su-xun-huan-you-yi-wen-ti/"/>
+    <id>https://zrxxiao.github.io/2021/09/11/pat-basic-level/1008-shu-zu-yuan-su-xun-huan-you-yi-wen-ti/</id>
+    <published>2021-09-11T12:39:51.533Z</published>
+    <updated>2021-09-11T13:04:46.369Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;strong&gt;1008 数组元素循环右移问题 (20</summary>
+        
+      
+    
+    
+    
+    <category term="PAT(Basic Level)" scheme="https://zrxxiao.github.io/categories/PAT-Basic-Level/"/>
+    
+    
+    <category term="c++" scheme="https://zrxxiao.github.io/tags/c/"/>
+    
+    <category term="PAT" scheme="https://zrxxiao.github.io/tags/PAT/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>1007 素数对猜想</title>
+    <link href="https://zrxxiao.github.io/2021/09/11/pat-basic-level/1007-su-shu-dui-cai-xiang/"/>
+    <id>https://zrxxiao.github.io/2021/09/11/pat-basic-level/1007-su-shu-dui-cai-xiang/</id>
+    <published>2021-09-11T12:39:43.076Z</published>
+    <updated>2021-09-11T13:03:11.806Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;strong&gt;1007 素数对猜想 (20</summary>
+        
+      
+    
+    
+    
+    <category term="PAT(Basic Level)" scheme="https://zrxxiao.github.io/categories/PAT-Basic-Level/"/>
+    
+    
+    <category term="c++" scheme="https://zrxxiao.github.io/tags/c/"/>
+    
+    <category term="PAT" scheme="https://zrxxiao.github.io/tags/PAT/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>1006 换个格式输出整数</title>
+    <link href="https://zrxxiao.github.io/2021/09/11/pat-basic-level/1006-huan-ge-ge-shi-shu-chu-zheng-shu/"/>
+    <id>https://zrxxiao.github.io/2021/09/11/pat-basic-level/1006-huan-ge-ge-shi-shu-chu-zheng-shu/</id>
+    <published>2021-09-11T12:39:35.474Z</published>
+    <updated>2021-09-11T13:03:05.649Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;strong&gt;1006 换个格式输出整数 (15 分)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;让我们用字母 B 来表示“百”、字母 S 表示“十”，用 12…n 来表示不为零的个位数字 n（&amp;lt;10），换个格式来输出任一个不超过 3 位的正整数。例如 234 应该被输出为</summary>
+        
+      
+    
+    
+    
+    <category term="PAT(Basic Level)" scheme="https://zrxxiao.github.io/categories/PAT-Basic-Level/"/>
+    
+    
+    <category term="c++" scheme="https://zrxxiao.github.io/tags/c/"/>
+    
+    <category term="PAT" scheme="https://zrxxiao.github.io/tags/PAT/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>1005 继续(3n+1)猜想</title>
+    <link href="https://zrxxiao.github.io/2021/09/11/pat-basic-level/1005-ji-xu-3n-1-cai-xiang/"/>
+    <id>https://zrxxiao.github.io/2021/09/11/pat-basic-level/1005-ji-xu-3n-1-cai-xiang/</id>
+    <published>2021-09-11T12:39:27.423Z</published>
+    <updated>2021-09-11T12:44:41.314Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;strong&gt;1005 继续(3n+1)猜想 (25</summary>
+        
+      
+    
+    
+    
+    <category term="PAT(Basic Level)" scheme="https://zrxxiao.github.io/categories/PAT-Basic-Level/"/>
+    
+    
+    <category term="c++" scheme="https://zrxxiao.github.io/tags/c/"/>
+    
+    <category term="PAT" scheme="https://zrxxiao.github.io/tags/PAT/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>1004 成绩排名</title>
+    <link href="https://zrxxiao.github.io/2021/09/11/pat-basic-level/1004-cheng-ji-pai-ming/"/>
+    <id>https://zrxxiao.github.io/2021/09/11/pat-basic-level/1004-cheng-ji-pai-ming/</id>
+    <published>2021-09-11T12:39:20.771Z</published>
+    <updated>2021-09-11T12:42:48.638Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;strong&gt;1004 成绩排名 (20 分)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;读入 &lt;em&gt;n&lt;/em&gt;（&amp;gt;0）名学生的姓名、学号、成绩，分别输出成绩最高和成绩最低学生的姓名和学号。&lt;/p&gt;
+&lt;p&gt;输入格式：&lt;/p&gt;
+&lt;p&gt;每个测试输入包含 1</summary>
+        
+      
+    
+    
+    
+    <category term="PAT(Basic Level)" scheme="https://zrxxiao.github.io/categories/PAT-Basic-Level/"/>
+    
+    
+    <category term="c++" scheme="https://zrxxiao.github.io/tags/c/"/>
+    
+    <category term="PAT" scheme="https://zrxxiao.github.io/tags/PAT/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>1003 我要通过</title>
+    <link href="https://zrxxiao.github.io/2021/09/11/pat-basic-level/1003-wo-yao-tong-guo/"/>
+    <id>https://zrxxiao.github.io/2021/09/11/pat-basic-level/1003-wo-yao-tong-guo/</id>
+    <published>2021-09-11T12:30:56.628Z</published>
+    <updated>2021-09-11T12:37:45.812Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;strong&gt;1003 我要通过！ (20 分)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;“&lt;strong&gt;答案正确&lt;/strong&gt;”是自动判题系统给出的最令人欢喜的回复。本题属于 PAT 的“&lt;strong&gt;答案正确&lt;/strong&gt;”大派送 ——</summary>
+        
+      
+    
+    
+    
+    <category term="PAT(Basic Level)" scheme="https://zrxxiao.github.io/categories/PAT-Basic-Level/"/>
+    
+    
+    <category term="c++" scheme="https://zrxxiao.github.io/tags/c/"/>
+    
+    <category term="PAT" scheme="https://zrxxiao.github.io/tags/PAT/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>1002 写出这个数</title>
+    <link href="https://zrxxiao.github.io/2021/09/11/pat-basic-level/1002-xie-chu-zhe-ge-shu/"/>
+    <id>https://zrxxiao.github.io/2021/09/11/pat-basic-level/1002-xie-chu-zhe-ge-shu/</id>
+    <published>2021-09-11T12:20:12.064Z</published>
+    <updated>2021-09-11T12:30:38.943Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;1002 写出这个数 (20 分)&lt;/p&gt;
+&lt;p&gt;读入一个正整数 &lt;em&gt;n&lt;/em&gt;，计算其各位数字之和，用汉语拼音写出和的每一位数字。&lt;/p&gt;
+&lt;p&gt;输入格式：&lt;/p&gt;
+&lt;p&gt;每个测试输入包含 1 个测试用例，即给出自然数 &lt;em&gt;n&lt;/em&gt; 的值。这里保证</summary>
+        
+      
+    
+    
+    
+    <category term="PAT(Basic Level)" scheme="https://zrxxiao.github.io/categories/PAT-Basic-Level/"/>
+    
+    
+    <category term="c++" scheme="https://zrxxiao.github.io/tags/c/"/>
+    
+    <category term="PAT" scheme="https://zrxxiao.github.io/tags/PAT/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>1001 害死人不偿命的(3n+1)猜想</title>
+    <link href="https://zrxxiao.github.io/2021/09/11/pat-basic-level/1001-hai-si-ren-bu-chang-ming-de-3n-1-cai-xiang/"/>
+    <id>https://zrxxiao.github.io/2021/09/11/pat-basic-level/1001-hai-si-ren-bu-chang-ming-de-3n-1-cai-xiang/</id>
+    <published>2021-09-11T11:33:47.430Z</published>
+    <updated>2021-09-11T11:51:07.495Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;strong&gt;1001 害死人不偿命的(3n+1)猜想 (15 分)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;卡拉兹(Callatz)猜想：&lt;/p&gt;
+&lt;p&gt;对任何一个正整数 &lt;em&gt;n&lt;/em&gt;，如果它是偶数，那么把它砍掉一半；如果它是奇数，那么把</summary>
+        
+      
+    
+    
+    
+    <category term="PAT(Basic Level)" scheme="https://zrxxiao.github.io/categories/PAT-Basic-Level/"/>
+    
+    
+    <category term="c++" scheme="https://zrxxiao.github.io/tags/c/"/>
+    
+    <category term="PAT" scheme="https://zrxxiao.github.io/tags/PAT/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>保护模式</title>
+    <link href="https://zrxxiao.github.io/2021/01/01/dong-shou-xie-cao-zuo-xi-tong/3-bao-hu-mo-shi/"/>
+    <id>https://zrxxiao.github.io/2021/01/01/dong-shou-xie-cao-zuo-xi-tong/3-bao-hu-mo-shi/</id>
+    <published>2021-01-01T12:46:28.361Z</published>
+    <updated>2021-01-01T05:59:19.286Z</updated>
+    
+    
+    
+    
+    <category term="动手写操作系统" scheme="https://zrxxiao.github.io/categories/%E5%8A%A8%E6%89%8B%E5%86%99%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    
+    
+    <category term="汇编" scheme="https://zrxxiao.github.io/tags/%E6%B1%87%E7%BC%96/"/>
+    
+    <category term="操作系统" scheme="https://zrxxiao.github.io/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>搭建工作环境</title>
+    <link href="https://zrxxiao.github.io/2021/01/01/dong-shou-xie-cao-zuo-xi-tong/2-da-jian-huan-jing/"/>
+    <id>https://zrxxiao.github.io/2021/01/01/dong-shou-xie-cao-zuo-xi-tong/2-da-jian-huan-jing/</id>
+    <published>2021-01-01T12:46:28.345Z</published>
+    <updated>2021-01-01T13:23:53.709Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;本系列是我按照书籍《Orange</summary>
+        
+      
+    
+    
+    
+    <category term="动手写操作系统" scheme="https://zrxxiao.github.io/categories/%E5%8A%A8%E6%89%8B%E5%86%99%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    
+    
+    <category term="汇编" scheme="https://zrxxiao.github.io/tags/%E6%B1%87%E7%BC%96/"/>
+    
+    <category term="操作系统" scheme="https://zrxxiao.github.io/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    
+  </entry>
+  
+</feed>
