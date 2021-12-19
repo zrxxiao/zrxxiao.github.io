@@ -4,7 +4,7 @@
 
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta name="keywords" content="1001 害死人不偿命的(3n+1)猜想, 萧十三的博客">
+    <meta name="keywords" content="1015 德才论, 萧十三的博客">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>1001 害死人不偿命的(3n+1)猜想 | 萧十三的博客</title>
+    <title>1015 德才论 | 萧十三的博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -313,12 +313,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">1001 害死人不偿命的(3n+1)猜想</h1>
+                    <h1 class="description center-align post-title">1015 德才论</h1>
                 </div>
             </div>
         </div>
@@ -463,28 +463,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-09-11
+                    2021-12-19
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-09-11
+                    2021-12-19
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    371
+                    897
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    4 分
                 </div>
                 
 
@@ -507,22 +507,22 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p><strong>1001 害死人不偿命的(3n+1)猜想 (15 分)</strong></p>
-<p>卡拉兹(Callatz)猜想：</p>
-<p>对任何一个正整数 <em>n</em>，如果它是偶数，那么把它砍掉一半；如果它是奇数，那么把 (3<em>n</em>+1) 砍掉一半。这样一直反复砍下去，最后一定在某一步得到 <em>n</em>=1。卡拉兹在 1950 年的世界数学家大会上公布了这个猜想，传说当时耶鲁大学师生齐动员，拼命想证明这个貌似很傻很天真的命题，结果闹得学生们无心学业，一心只证 (3<em>n</em>+1)，以至于有人说这是一个阴谋，卡拉兹是在蓄意延缓美国数学界教学与科研的进展……</p>
-<p>我们今天的题目不是证明卡拉兹猜想，而是对给定的任一不超过 1000 的正整数 <em>n</em>，简单地数一下，需要多少步（砍几下）才能得到 <em>n</em>=1？</p>
+                <p><strong>1015 德才论 (25 分)</strong></p>
+<p>宋代史学家司马光在《资治通鉴》中有一段著名的“德才论”：“是故才德全尽谓之圣人，才德兼亡谓之愚人，德胜才谓之君子，才胜德谓之小人。凡取人之术，苟不得圣人，君子而与之，与其得小人，不若得愚人。”</p>
+<p>现给出一批考生的德才分数，请根据司马光的理论给出录取排名。</p>
 <p>输入格式：</p>
-<p>每个测试输入包含 1 个测试用例，即给出正整数 <em>n</em> 的值。</p>
+<p>输入第一行给出 3 个正整数，分别为：<em>N</em>（≤105），即考生总数；<em>L</em>（≥60），为录取最低分数线，即德分和才分均不低于 <em>L</em> 的考生才有资格被考虑录取；<em>H</em>（&lt;100），为优先录取线——德分和才分均不低于此线的被定义为“才德全尽”，此类考生按德才总分从高到低排序；才分不到但德分到线的一类考生属于“德胜才”，也按总分排序，但排在第一类考生之后；德才分均低于 <em>H</em>，但是德分不低于才分的考生属于“才德兼亡”但尚有“德胜才”者，按总分排序，但排在第二类考生之后；其他达到最低线 <em>L</em> 的考生也按总分排序，但排在第三类考生之后。</p>
+<p>随后 <em>N</em> 行，每行给出一位考生的信息，包括：准考证号 德分 才分，其中准考证号为 8 位整数，德才分为区间 [0, 100] 内的整数。数字间以空格分隔。</p>
 <p>输出格式：</p>
-<p>输出从 <em>n</em> 计算到 1 需要的步数。</p>
+<p>输出第一行首先给出达到最低分数线的考生人数 <em>M</em>，随后 <em>M</em> 行，每行按照输入格式输出一位考生的信息，考生按输入中说明的规则从高到低排序。当某类考生中有多人总分相同时，按其德分降序排列；若德分也并列，则按准考证号的升序输出。</p>
 <p>输入样例：</p>
-<p>3</p>
+<p>14 60 80 10000001 64 90 10000002 90 60 10000011 85 80 10000003 85 80 10000004 80 85 10000005 82 77 10000006 83 76 10000007 90 78 10000008 75 79 10000009 59 90 10000010 88 45 10000012 80 100 10000013 90 99 10000014 66 60</p>
 <p>结尾无空行</p>
 <p>输出样例：</p>
-<p>5</p>
+<p>12 10000013 90 99 10000012 80 100 10000003 85 80 10000011 85 80 10000004 80 85 10000007 90 78 10000006 83 76 10000005 82 77 10000002 90 60 10000014 66 60 10000008 75 79 10000001 64 90</p>
 <p>结尾无空行</p>
 <p>作者</p>
-<p><strong>CHEN, Yue</strong></p>
+<p><strong>CHEN, Li</strong></p>
 <p>单位</p>
 <p>浙江大学</p>
 <p>代码长度限制</p>
@@ -533,23 +533,65 @@
 <p>64 MB</p>
 <p>C++ (g++)</p>
 <pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include&lt;iostream&gt;
+#include&lt;vector&gt;
+#include&lt;algorithm&gt;
 using namespace std;
 
-int main()
-{
-	int n, step = 0;
- 	cin &gt;&gt; n;
- 	while(n != 1)
-	{
-		if (n%2 == 0)
-			n= n/2;
-		else
-			n=(3*n+1)/2;
-		step++;
-	}
- cout &lt;&lt; step;
- return 0;
-}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+struct node{
+    int no;//准考证号 
+    int dscore;//德分 
+    int cscore;//才分 
+    int sumscore;//总分 
+};
+
+bool cmp(node a,node b) {
+    if (a.sumscore &gt; b.sumscore) {
+        return true;//升序 
+    } else if (a.sumscore == b.sumscore) {//总分相同 
+        if (a.dscore &gt; b.dscore) {
+            return true;//升序 
+        } else if (a.dscore == b.dscore) { //德分相同 
+                return a.no &lt; b.no;//降序 
+        }
+    }
+    return false;
+}
+
+int main() {
+    int N, L, H;
+    int cnt = 0;//计数
+    cin &gt;&gt; N &gt;&gt; L &gt;&gt; H;
+    vector&lt;node&gt;v[4];//4个容器
+    for (int i = 0; i &lt; N; i++) { 
+        node stu;
+        cin &gt;&gt; stu.no &gt;&gt; stu.dscore &gt;&gt; stu.cscore;
+        stu.sumscore = stu.dscore + stu.cscore;//计算总分
+        if (stu.dscore &gt;=L &amp;&amp;stu.cscore &gt;= L) {
+            cnt++;
+            if (stu.dscore &gt;= H &amp;&amp; stu.cscore &gt;= H) {
+                v[0].push_back(stu);      //第一类 
+            } else if (stu.dscore &gt;= H) {
+                v[1].push_back(stu); //第二类 
+            } else if (stu.dscore &gt;= stu.cscore){
+                v[2].push_back(stu);//第三类 
+            }else {
+                v[3].push_back(stu);//第四类 
+            }
+        }
+    }
+    cout &lt;&lt; cnt &lt;&lt; endl;
+    for (int i = 0; i &lt; 4; i++) {
+        sort(v[i].begin(), v[i].end(), cmp);
+    }
+    for(int i = 0; i &lt; 4; i++){
+        for(unsigned int j = 0; j &lt; v[i].size(); j++){
+            printf("%d %d %d\n",v[i][j].no, v[i][j].dscore, v[i][j].cscore);
+        }
+    }
+    return 0;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
 
 
                 
@@ -577,7 +619,7 @@ int main()
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://zrxxiao.github.io/2021/09/11/pat-basic-level/1001-hai-si-ren-bu-chang-ming-de-3n-1-cai-xiang/">https://zrxxiao.github.io/2021/09/11/pat-basic-level/1001-hai-si-ren-bu-chang-ming-de-3n-1-cai-xiang/</a>
+                    <a href="https://zrxxiao.github.io/2021/12/19/pat-basic-level/1015-de-cai-lun/">https://zrxxiao.github.io/2021/12/19/pat-basic-level/1015-de-cai-lun/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -790,17 +832,18 @@ int main()
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/09/11/pat-basic-level/1002-xie-chu-zhe-ge-shu/">
+                <a href="/2021/12/19/pat-basic-level/1015-de-cai-lun/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="1002 写出这个数">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="1015 德才论">
                         
-                        <span class="card-title">1002 写出这个数</span>
+                        <span class="card-title">1015 德才论</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -810,9 +853,9 @@ int main()
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-09-11
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-12-19
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -825,6 +868,7 @@ int main()
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -847,13 +891,13 @@ int main()
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/01/01/dong-shou-xie-cao-zuo-xi-tong/3-bao-hu-mo-shi-part1/">
+                <a href="/2021/12/19/pat-basic-level/mo-ban/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="保护模式_part1">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
                         
-                        <span class="card-title">保护模式_part1</span>
+                        <span class="card-title"></span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -864,14 +908,14 @@ int main()
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-01
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-12-19
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%8A%A8%E6%89%8B%E5%86%99%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" class="post-category">
-                                    动手写操作系统
+                            <a href="/categories/PAT-Basic-Level/" class="post-category">
+                                    PAT(Basic Level)
                                 </a>
                             
                             
@@ -881,12 +925,12 @@ int main()
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%B1%87%E7%BC%96/">
-                        <span class="chip bg-color">汇编</span>
+                    <a href="/tags/c/">
+                        <span class="chip bg-color">c++</span>
                     </a>
                     
-                    <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
-                        <span class="chip bg-color">操作系统</span>
+                    <a href="/tags/PAT/">
+                        <span class="chip bg-color">PAT</span>
                     </a>
                     
                 </div>

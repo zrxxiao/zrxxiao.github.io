@@ -470,21 +470,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-12-17
+                    2021-12-19
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.5k
+                    989
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    7 分
+                    4 分
                 </div>
                 
 
@@ -510,8 +510,8 @@
                 <p>本系列是我按照书籍《Orange S：一个操作系统的实现》，自己亲自动手写一个自己的操作系统，希望以此来提<br>高自己的C语言的编程能力和对操作系统的认识。由于书出版时间比较早，和实际有点出入，我就按照我实际过<br>程将它们总结下来。本章是将书中的第一二章合在一起。</p>
 <h2 id="一、准备工作"><a href="#一、准备工作" class="headerlink" title="一、准备工作"></a>一、准备工作</h2><h3 id="硬件"><a href="#硬件" class="headerlink" title="硬件"></a>硬件</h3><p>Windows系统电脑</p>
 <h3 id="软件"><a href="#软件" class="headerlink" title="软件"></a>软件</h3><p>虚拟机<br>Bochs-2.6.10<br>汇编编译器NASM</p>
-<h2 id="二、新建源代码文件夹"><a href="#二、新建源代码文件夹" class="headerlink" title="二、新建源代码文件夹"></a>二、新建源代码文件夹</h2><p>我在虚拟机的Linux环境下新建的一个文件夹XOS用来存放源文件，同时新建一个boot.asm文件，并将以下内容<br>写到文件中。</p>
-<pre class="line-numbers language-汇编" data-language="汇编"><code class="language-汇编">        org     07c00h                  ; 告诉编译器程序加载到7c00处
+<h2 id="二、新建源代码文件夹"><a href="#二、新建源代码文件夹" class="headerlink" title="二、新建源代码文件夹"></a>二、新建源代码文件夹</h2><p>我在虚拟机的Linux环境下新建的一个XOS，同时新建chapter2文件夹存放这章源文件，新建一个boot.asm文件，并将以下内容写到文件中。</p>
+<pre class="line-numbers language-assembly" data-language="assembly"><code class="language-assembly">        org     07c00h                  ; 告诉编译器程序加载到7c00处
         mov     ax, cs
         mov     ds, ax
         mov     es, ax
@@ -610,88 +610,7 @@ keyboard: keymap=$BXSHARE/keymaps/x11-pc-us.map<span aria-hidden="true" class="l
 
 <h3 id="启动，输入以下命令"><a href="#启动，输入以下命令" class="headerlink" title="启动，输入以下命令"></a>启动，输入以下命令</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">bochs -f bochsrc<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<h3 id="调试系统"><a href="#调试系统" class="headerlink" title="调试系统"></a>调试系统</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">root@xzr-virtual-machine:/home/xzr<span class="token comment"># cd download/bochs-2.6.10</span>
-root@xzr-virtual-machine:/home/xzr/download/bochs-2.6.10<span class="token comment"># </span>
-root@xzr-virtual-machine:/home/xzr/download/bochs-2.6.10<span class="token comment"># </span>
-root@xzr-virtual-machine:/home/xzr/download/bochs-2.6.10<span class="token comment"># </span>
-root@xzr-virtual-machine:/home/xzr/download/bochs-2.6.10<span class="token comment"># dd if=boot.bin of=a.img bs=512 count=1 conv=notrunc</span>
-记录了1+0 的读入
-记录了1+0 的写出
-<span class="token number">512</span> bytes copied, <span class="token number">0.000262613</span> s, <span class="token number">1.9</span> MB/s
-
-root@xzr-virtual-machine:/home/xzr/download/bochs-2.6.10<span class="token comment">#  bochs -f bochsrc</span>
-<span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span>
-
-                       Bochs x86 Emulator <span class="token number">2.6</span>.10
-              Built from SVN snapshot on December <span class="token number">1</span>, <span class="token number">2019</span>
-                  Compiled on Dec <span class="token number">31</span> <span class="token number">2020</span> at <span class="token number">22</span>:48:26
-
-<span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span>
-00000000000i<span class="token punctuation">[</span>      <span class="token punctuation">]</span> BXSHARE not set. using compile <span class="token function">time</span> default <span class="token string">'/usr/local/share/bochs'</span>
-
-00000000000i<span class="token punctuation">[</span>      <span class="token punctuation">]</span> reading configuration from bochsrc
-------------------------------
-
-Bochs Configuration: Main Menu
-------------------------------
-
-This is the Bochs Configuration Interface, where you can describe the
-machine that you want to simulate.  Bochs has already searched <span class="token keyword">for</span> a
-configuration <span class="token function">file</span> <span class="token punctuation">(</span>typically called bochsrc.txt<span class="token punctuation">)</span> and loaded it <span class="token keyword">if</span> it
-could be found.  When you are satisfied with the configuration, go
-ahead and start the simulation.
-
-You can also start bochs with the -q option to skip these menus.
-
-<span class="token number">1</span>. Restore factory default configuration
-<span class="token number">2</span>. Read options from<span class="token punctuation">..</span>.
-<span class="token number">3</span>. Edit options
-<span class="token number">4</span>. Save options to<span class="token punctuation">..</span>.
-<span class="token number">5</span>. Restore the Bochs state from<span class="token punctuation">..</span>.
-<span class="token number">6</span>. Begin simulation
-<span class="token number">7</span>. Quit now
-
-Please choose one: <span class="token punctuation">[</span><span class="token number">6</span><span class="token punctuation">]</span> 
-00000000000i<span class="token punctuation">[</span>      <span class="token punctuation">]</span> installing x module as the Bochs GUI
-00000000000i<span class="token punctuation">[</span>      <span class="token punctuation">]</span> using log <span class="token function">file</span> bochsout.txt
-Next at <span class="token assign-left variable">t</span><span class="token operator">=</span><span class="token number">0</span>
-<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">[</span>0x0000fffffff0<span class="token punctuation">]</span> f000:fff0 <span class="token punctuation">(</span>unk. ctxt<span class="token punctuation">)</span>: jmpf 0xf000:e05b          <span class="token punctuation">;</span> ea5be000f0
-<span class="token operator">&lt;</span>bochs:<span class="token operator"><span class="token file-descriptor important">1</span>&gt;</span> b 0x7c00         
-<span class="token operator">&lt;</span>bochs:<span class="token operator"><span class="token file-descriptor important">2</span>&gt;</span> c
-<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span> Breakpoint <span class="token number">1</span>, 0x00007c00 <span class="token keyword">in</span> ?? <span class="token punctuation">(</span><span class="token punctuation">)</span>
-Next at <span class="token assign-left variable">t</span><span class="token operator">=</span><span class="token number">14040241</span>
-<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">[</span>0x000000007c00<span class="token punctuation">]</span> 0000:7c00 <span class="token punctuation">(</span>unk. ctxt<span class="token punctuation">)</span>: jmp .+76 <span class="token punctuation">(</span>0x00007c4e<span class="token punctuation">)</span>     <span class="token punctuation">;</span> eb4c
-<span class="token operator">&lt;</span>bochs:<span class="token operator"><span class="token file-descriptor important">3</span>&gt;</span> x /64xb 0x7c00
-<span class="token punctuation">[</span>bochs<span class="token punctuation">]</span>:
-0x00007c00 <span class="token operator">&lt;</span>bogus+       <span class="token operator"><span class="token file-descriptor important">0</span>&gt;</span>:	0xeb	0x4c	0x90	0x00	0x00	0x00	0x00	0x00
-0x00007c08 <span class="token operator">&lt;</span>bogus+       <span class="token operator"><span class="token file-descriptor important">8</span>&gt;</span>:	0x00	0x00	0x00	0x00	0x02	0x01	0x01	0x00
-0x00007c10 <span class="token operator">&lt;</span>bogus+      <span class="token number">1</span><span class="token operator"><span class="token file-descriptor important">6</span>&gt;</span>:	0x02	0xe0	0x00	0x40	0x0b	0xf0	0x09	0x00
-0x00007c18 <span class="token operator">&lt;</span>bogus+      <span class="token number">2</span><span class="token operator"><span class="token file-descriptor important">4</span>&gt;</span>:	0x12	0x00	0x02	0x00	0x00	0x00	0x00	0x00
-0x00007c20 <span class="token operator">&lt;</span>bogus+      <span class="token number">3</span><span class="token operator"><span class="token file-descriptor important">2</span>&gt;</span>:	0x00	0x00	0x00	0x00	0x00	0x00	0x29	0x0b
-0x00007c28 <span class="token operator">&lt;</span>bogus+      <span class="token number">4</span><span class="token operator"><span class="token file-descriptor important">0</span>&gt;</span>:	0x60	0xf5	0x37	0x46	0x52	0x45	0x45	0x44
-0x00007c30 <span class="token operator">&lt;</span>bogus+      <span class="token number">4</span><span class="token operator"><span class="token file-descriptor important">8</span>&gt;</span>:	0x4f	0x53	0x32	0x30	0x30	0x30	0x46	0x41
-0x00007c38 <span class="token operator">&lt;</span>bogus+      <span class="token number">5</span><span class="token operator"><span class="token file-descriptor important">6</span>&gt;</span>:	0x54	0x31	0x32	0x20	0x20	0x20	0x60	0x00
-<span class="token operator">&lt;</span>bochs:<span class="token operator"><span class="token file-descriptor important">4</span>&gt;</span> n
-Next at <span class="token assign-left variable">t</span><span class="token operator">=</span><span class="token number">14040242</span>
-<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">[</span>0x000000007c4e<span class="token punctuation">]</span> 0000:7c4e <span class="token punctuation">(</span>unk. ctxt<span class="token punctuation">)</span>: cli                       <span class="token punctuation">;</span> fa
-<span class="token operator">&lt;</span>bochs:<span class="token operator"><span class="token file-descriptor important">5</span>&gt;</span> trace-reg on
-Register-Tracing enabled <span class="token keyword">for</span> CPU0
-<span class="token operator">&lt;</span>bochs:<span class="token operator"><span class="token file-descriptor important">6</span>&gt;</span> n
-Next at <span class="token assign-left variable">t</span><span class="token operator">=</span><span class="token number">14040243</span>
-eax: 0x0000aa55 <span class="token number">43605</span>
-ebx: 0x00000000 <span class="token number">0</span>
-ecx: 0x00090000 <span class="token number">589824</span>
-edx: 0x00000000 <span class="token number">0</span>
-esp: 0x0000ffd6 <span class="token number">65494</span>
-ebp: 0x00000000 <span class="token number">0</span>
-esi: 0x000e0000 <span class="token number">917504</span>
-edi: 0x0000ffac <span class="token number">65452</span>
-eip: 0x00007c4f
-eflags 0x00000082: <span class="token function">id</span> vip vif ac vm rf nt <span class="token assign-left variable">IOPL</span><span class="token operator">=</span><span class="token number">0</span> of <span class="token function">df</span> <span class="token keyword">if</span> tf SF zf af pf cf
-<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">[</span>0x000000007c4f<span class="token punctuation">]</span> 0000:7c4f <span class="token punctuation">(</span>unk. ctxt<span class="token punctuation">)</span>: cld                       <span class="token punctuation">;</span> fc
-<span class="token operator">&lt;</span>bochs:<span class="token operator"><span class="token file-descriptor important">7</span>&gt;</span> c<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>按照书中的步骤就可以尝试着调试，需要注意的是dump_cpu命令，新版本不支持，可以使用r | fp | mmx |sse<br>| dreg | sreg | creg 这些命令查看相关信息，或者使用help命令查看帮助。</p>
+<h3 id="调试系统"><a href="#调试系统" class="headerlink" title="调试系统"></a>调试系统</h3><p>按照书中的步骤就可以尝试着调试，需要注意的是dump_cpu命令，新版本不支持，可以使用r | fp | mmx |sse<br>| dreg | sreg | creg 这些命令查看相关信息，或者使用help命令查看帮助。</p>
 <p>表 2 .1部 分Bochs调试指令<img src="/2021/01/01/dong-shou-xie-cao-zuo-xi-tong/2-da-jian-huan-jing/Capture.png" style="zoom: 150%;"></p>
 
                 
@@ -936,13 +855,13 @@ eflags 0x00000082: <span class="token function">id</span> vip vif ac vm rf nt <s
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/01/01/dong-shou-xie-cao-zuo-xi-tong/3-bao-hu-mo-shi/">
+                <a href="/2021/01/01/dong-shou-xie-cao-zuo-xi-tong/3-bao-hu-mo-shi-part1/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="保护模式">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="保护模式_part1">
                         
-                        <span class="card-title">保护模式</span>
+                        <span class="card-title">保护模式_part1</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1269,7 +1188,7 @@ eflags 0x00000082: <span class="token function">id</span> vip vif ac vm rf nt <s
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">6.8k</span>&nbsp;字
+                class="white-color">11.6k</span>&nbsp;字
             
             
             

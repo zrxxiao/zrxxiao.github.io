@@ -4,7 +4,7 @@
 
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta name="keywords" content="1001 害死人不偿命的(3n+1)猜想, 萧十三的博客">
+    <meta name="keywords" content="1014 福尔摩斯的约会, 萧十三的博客">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>1001 害死人不偿命的(3n+1)猜想 | 萧十三的博客</title>
+    <title>1014 福尔摩斯的约会 | 萧十三的博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -313,12 +313,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">1001 害死人不偿命的(3n+1)猜想</h1>
+                    <h1 class="description center-align post-title">1014 福尔摩斯的约会</h1>
                 </div>
             </div>
         </div>
@@ -463,28 +463,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-09-11
+                    2021-12-19
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-09-11
+                    2021-12-19
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    371
+                    603
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -507,19 +507,19 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p><strong>1001 害死人不偿命的(3n+1)猜想 (15 分)</strong></p>
-<p>卡拉兹(Callatz)猜想：</p>
-<p>对任何一个正整数 <em>n</em>，如果它是偶数，那么把它砍掉一半；如果它是奇数，那么把 (3<em>n</em>+1) 砍掉一半。这样一直反复砍下去，最后一定在某一步得到 <em>n</em>=1。卡拉兹在 1950 年的世界数学家大会上公布了这个猜想，传说当时耶鲁大学师生齐动员，拼命想证明这个貌似很傻很天真的命题，结果闹得学生们无心学业，一心只证 (3<em>n</em>+1)，以至于有人说这是一个阴谋，卡拉兹是在蓄意延缓美国数学界教学与科研的进展……</p>
-<p>我们今天的题目不是证明卡拉兹猜想，而是对给定的任一不超过 1000 的正整数 <em>n</em>，简单地数一下，需要多少步（砍几下）才能得到 <em>n</em>=1？</p>
+                <p><strong>1014 福尔摩斯的约会 (20 分)</strong></p>
+<p>大侦探福尔摩斯接到一张奇怪的字条：</p>
+<p>我们约会吧！  3485djDkxh4hhGE  2984akDfkkkkggEdsb  s&amp;hgsfdk  d&amp;Hyscvnm</p>
+<p>大侦探很快就明白了，字条上奇怪的乱码实际上就是约会的时间星期四 14:04，因为前面两字符串中第 1 对相同的大写英文字母（大小写有区分）是第 4 个字母 D，代表星期四；第 2 对相同的字符是 E ，那是第 5 个英文字母，代表一天里的第 14 个钟头（于是一天的 0 点到 23 点由数字 0 到 9、以及大写字母 A 到 N 表示）；后面两字符串第 1 对相同的英文字母 s 出现在第 4 个位置（从 0 开始计数）上，代表第 4 分钟。现给定两对字符串，请帮助福尔摩斯解码得到约会的时间。</p>
 <p>输入格式：</p>
-<p>每个测试输入包含 1 个测试用例，即给出正整数 <em>n</em> 的值。</p>
+<p>输入在 4 行中分别给出 4 个非空、不包含空格、且长度不超过 60 的字符串。</p>
 <p>输出格式：</p>
-<p>输出从 <em>n</em> 计算到 1 需要的步数。</p>
+<p>在一行中输出约会的时间，格式为 DAY HH:MM，其中 DAY 是某星期的 3 字符缩写，即 MON 表示星期一，TUE 表示星期二，WED 表示星期三，THU 表示星期四，FRI 表示星期五，SAT 表示星期六，SUN 表示星期日。题目输入保证每个测试存在唯一解。</p>
 <p>输入样例：</p>
-<p>3</p>
+<p>3485djDkxh4hhGE  2984akDfkkkkggEdsb  s&amp;hgsfdk  d&amp;Hyscvnm</p>
 <p>结尾无空行</p>
 <p>输出样例：</p>
-<p>5</p>
+<p>THU 14:04</p>
 <p>结尾无空行</p>
 <p>作者</p>
 <p><strong>CHEN, Yue</strong></p>
@@ -528,28 +528,60 @@
 <p>代码长度限制</p>
 <p>16 KB</p>
 <p>时间限制</p>
-<p>400 ms</p>
+<p>200 ms</p>
 <p>内存限制</p>
 <p>64 MB</p>
 <p>C++ (g++)</p>
-<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include&lt;iostream&gt;
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include &lt;iostream&gt;
+
 using namespace std;
 
-int main()
-{
-	int n, step = 0;
- 	cin &gt;&gt; n;
- 	while(n != 1)
-	{
-		if (n%2 == 0)
-			n= n/2;
-		else
-			n=(3*n+1)/2;
-		step++;
-	}
- cout &lt;&lt; step;
- return 0;
-}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+#define range(num,x,y) (num&gt;=x&amp;&amp;num&lt;=y)
+string week[8]={"MON","TUE","WED","THU","FRI","SAT","SUN"};
+int main(){
+    string str[4];
+    for(int i=0;i&lt;4;i++)
+            cin &gt;&gt; str[i];
+
+    int len1=min(str[0].size(),str[1].size());
+    int len2=min(str[2].size(),str[3].size());
+    
+    int cnt=0;
+    for(int i=0;i&lt;len1;i++)
+    {
+        if(cnt==0 &amp;&amp; str[0][i]==str[1][i] &amp;&amp; range(str[0][i],'A','G'))
+        {
+            cout&lt;&lt;week[str[0][i]-'A']&lt;&lt;" ";
+            cnt++;
+            continue;
+        }
+        if(cnt==1 &amp;&amp; str[0][i]==str[1][i])
+        {
+            if(range(str[0][i],'A','N'))
+            {
+                cout&lt;&lt;(10+str[0][i]-'A')&lt;&lt;":";
+                cnt++;
+            } 
+            else if(range(str[0][i],'0','9'))
+            {
+                printf("%02d:",str[0][i]-'0');
+                cnt++;
+            }
+        }
+    }
+    for(int i=0;i&lt;len2;i++)
+    {
+        if((str[2][i]==str[3][i] &amp;&amp; range(str[2][i],'a','z'))  || range(str[2][i],'A','Z'))
+        {
+            printf("%02d",i);
+            break;
+        }
+    }
+    return 0;
+
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
 
 
                 
@@ -577,7 +609,7 @@ int main()
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://zrxxiao.github.io/2021/09/11/pat-basic-level/1001-hai-si-ren-bu-chang-ming-de-3n-1-cai-xiang/">https://zrxxiao.github.io/2021/09/11/pat-basic-level/1001-hai-si-ren-bu-chang-ming-de-3n-1-cai-xiang/</a>
+                    <a href="https://zrxxiao.github.io/2021/12/19/pat-basic-level/1014-fu-er-mo-si-de-yue-hui/">https://zrxxiao.github.io/2021/12/19/pat-basic-level/1014-fu-er-mo-si-de-yue-hui/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -794,13 +826,13 @@ int main()
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/09/11/pat-basic-level/1002-xie-chu-zhe-ge-shu/">
+                <a href="/2021/12/19/pat-basic-level/mo-ban/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="1002 写出这个数">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
                         
-                        <span class="card-title">1002 写出这个数</span>
+                        <span class="card-title"></span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -811,7 +843,7 @@ int main()
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-09-11
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-12-19
                         </span>
                         <span class="publish-author">
                             
@@ -847,13 +879,13 @@ int main()
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/01/01/dong-shou-xie-cao-zuo-xi-tong/3-bao-hu-mo-shi-part1/">
+                <a href="/2021/12/19/pat-basic-level/1013-shu-su-shu/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="保护模式_part1">
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="1013 数素数">
                         
-                        <span class="card-title">保护模式_part1</span>
+                        <span class="card-title">1013 数素数</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -864,14 +896,14 @@ int main()
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-01
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-12-19
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%8A%A8%E6%89%8B%E5%86%99%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" class="post-category">
-                                    动手写操作系统
+                            <a href="/categories/PAT-Basic-Level/" class="post-category">
+                                    PAT(Basic Level)
                                 </a>
                             
                             
@@ -881,12 +913,12 @@ int main()
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%B1%87%E7%BC%96/">
-                        <span class="chip bg-color">汇编</span>
+                    <a href="/tags/c/">
+                        <span class="chip bg-color">c++</span>
                     </a>
                     
-                    <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
-                        <span class="chip bg-color">操作系统</span>
+                    <a href="/tags/PAT/">
+                        <span class="chip bg-color">PAT</span>
                     </a>
                     
                 </div>
